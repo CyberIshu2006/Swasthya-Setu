@@ -75,7 +75,34 @@ export default function SaathiChat() {
           <div className="px-3 pb-2 text-center text-[10px] text-slate-400">Avoid sharing passwords, Aadhaar/ABHA numbers, or identifying details.</div>
         </section>
       )}
-      {!open && <button type="button" onClick={() => setOpen(true)} aria-label="Open Saathi health assistant" className="flex items-center gap-2 rounded-full bg-teal-700 px-5 py-3.5 text-sm font-bold text-white shadow-xl transition hover:-translate-y-0.5 hover:bg-teal-800 focus:outline-none focus:ring-4 focus:ring-teal-200"><MessageCircle className="h-5 w-5" /> Ask Saathi</button>}
+      {!open && (
+  <button
+    type="button"
+    onClick={() => setOpen(true)}
+    aria-label="Open Saathi health assistant"
+    style={{
+      position: 'fixed',
+      bottom: '20px',
+      right: '20px',
+      zIndex: 99999,
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+      borderRadius: '999px',
+      background: '#0f766e',
+      color: '#ffffff',
+      padding: '14px 22px',
+      fontSize: '15px',
+      fontWeight: '700',
+      border: 'none',
+      cursor: 'pointer',
+      boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
+    }}
+  >
+    <MessageCircle size={20} />
+    Ask Saathi
+  </button>
+)}
     </div>
   );
 }
