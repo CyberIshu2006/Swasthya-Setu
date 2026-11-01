@@ -1,4 +1,4 @@
-```javascript
+javascript
 const API_BASE_URL = (
   import.meta.env.VITE_API_BASE_URL ||
   'https://medlink-8vbl.onrender.com'
@@ -80,4 +80,4 @@ export async function analyzePrescription(file) {
 
   return payload.data ?? payload;
 }
-```
+
